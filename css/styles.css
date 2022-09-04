@@ -67,7 +67,7 @@ img {
   padding-left: 15px;
   padding-right: 15px;
 
-  outline: 2px solid red;
+  /* outline: 2px solid red; */
 }
 .header-container {
   display: flex;
@@ -129,6 +129,9 @@ ul {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
 }
+.carrent:active {
+  color: var(--main-acsent-cl);
+}
 .header-studio:hover,
 .header-project:hover,
 .header-contact:hover,
@@ -167,7 +170,11 @@ ul {
     url(../images/img_bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 1600px 600px;
+  background-size: cover;
+  width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .bg-container {
   padding-top: 200px;
@@ -231,11 +238,10 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 25px;
-  padding-bottom: 25px;
   background-color: var(--main-bg-commands);
   border-radius: 4px;
   margin-bottom: 30px;
+  height: 120px;
 }
 .advantages-icon:hover {
   color: var(--main-acsent-cl);
@@ -352,6 +358,10 @@ p {
 .social-icon {
   fill: var(--main-icon);
 }
+.social-link:hover .social-icon,
+.social-link:focus .social-icon {
+  fill: var(--main-bg-cl);
+}
 
 /* Постійні клієнти */
 
@@ -364,27 +374,25 @@ p {
   display: flex;
   gap: 30px;
 }
+.customers-item {
+  flex-basis: calc((100% - 150px) / 6);
+}
 .link-Logo {
   display: flex;
   align-items: center;
   justify-content: center;
-
-  width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
 }
-.link-Logo:hover,
-.link-Logo:focus {
-  background-color: var(--main-bg-cl);
-  border: 1px solid var(--main-acsent-cl);
+.link-Logo:hover .icon-logo {
+  fill: var(--main-acsent-cl);
+}
+.link-Logo:focus .icon-logo {
+  fill: var(--main-acsent-cl);
 }
 .icon-logo {
   fill: var(--main-icon);
-}
-.icon-logo:hover,
-.icon-logo:focus {
-  fill: var(--main-acsent-cl);
 }
 
 /* footer */
@@ -494,7 +502,11 @@ button:focus {
 .project-item:nth-last-child(-n + 3) {
   margin-bottom: 0;
 }
-.project-item:hover {
+.project-link {
+  display: block;
+}
+.project-link:hover,
+.project-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
