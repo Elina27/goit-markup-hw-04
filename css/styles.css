@@ -129,7 +129,7 @@ ul {
   line-height: calc(16 / 14);
   letter-spacing: 0.02em;
 }
-.carrent:active {
+.carrent:visited {
   color: var(--main-acsent-cl);
 }
 .header-studio:hover,
